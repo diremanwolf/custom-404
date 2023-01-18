@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from '../../logo.svg';
-import '../../App.css';
+
+import icon from '../../assets/icons-monkey/full-monkey.webp';
+import './home.component.css';
 
 function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="Home">
+        <div>
+          <img src={icon} alt='It is an emoji. It shows a sitting monkey.'/>
+        </div>
+        <div>
+          <h1>This site is under constrution.</h1>
+        </div>
+    </section>
   );
 }
 
