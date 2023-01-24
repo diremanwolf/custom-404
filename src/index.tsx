@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/custom-404'>
       <App/>
     </BrowserRouter>
   </React.StrictMode>
