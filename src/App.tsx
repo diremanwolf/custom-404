@@ -5,7 +5,7 @@ import './assets/icons-monkey/see-monkey.webp';
 import './assets/icons-monkey/hear-monkey.webp';
 import './assets/icons-monkey/speak-monkey.webp';
 
-import Home from './pages/home/home.component';
+import Home from './pages/home/home.page';
 
 function App() {
   return (
@@ -17,4 +17,4 @@ function App() {
   );
 } 
 
-export default App
+export default App;
