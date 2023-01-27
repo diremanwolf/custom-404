@@ -1,19 +1,41 @@
-import icon from '../../assets/icons-monkey/full-monkey.webp';
 import './home.page.css';
 
-function Home() {
-  return (
-    <div>
-      <section className="Home">
-          <div>
-            <img src={icon} alt='It is an emoji. It shows a sitting monkey.'/>
-          </div>
-          <div>
-            <h1>This site is under constrution.</h1>
-          </div>
-      </section>
-    </div>
-  );
+import { Outlet } from 'react-router-dom';
+import { Center, Grid, GridItem } from '@chakra-ui/react';
+
+const Home = () => {
+	return (
+		<div className='Home'>
+			<Center>
+				<Grid
+					templateAreas={`"header header"
+										"nav main"
+										"nav footer"`}
+					gridTemplateRows={'50px 1fr 30px'}
+					gridTemplateColumns={'150px 1fr'}
+					h='75vh'
+					w='125vh'
+					gap='1'
+					color='blackAlpha.700'
+					fontWeight='bold'
+				>
+					<GridItem pl='2' bg='orange' area={'header'}>
+						Header
+					</GridItem>
+					<GridItem pl='2' bg='pink' area={'nav'}>
+						Nav
+					</GridItem>
+					<GridItem pl='2' bg='green' area={'main'}>
+						Main
+					</GridItem>
+					<GridItem pl='2' bg='blue' area={'footer'}>
+						Footer
+					</GridItem>
+				</Grid>
+			</Center>
+			<Outlet />
+		</div>
+	);
 }
 
 export default Home;
